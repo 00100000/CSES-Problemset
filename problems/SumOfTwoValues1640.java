@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-class SumOfTwoValues1640 {
+public class SumOfTwoValues1640 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
