@@ -28,7 +28,7 @@ struct Node {
 		sum = left->sum + right->sum;
 	}
 	void increment(long long r_lo, long long r_hi, long long amt) {
-		// disjolong long ranges
+		// disjoint ranges
 		if (r_lo > hi || r_hi < lo) return;
 		// check if this Node's range is contained completely in r range
 		if (r_lo <= lo && r_hi >= hi) {
@@ -44,7 +44,7 @@ struct Node {
 	}
 	void push() {
 		if (lazy != 0) {
-			// push the value long longo the children
+			// push the value into the children
 			left->increment(lo, hi, lazy);
 			right->increment(lo, hi, lazy);
 			lazy = 0;
