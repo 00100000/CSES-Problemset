@@ -89,10 +89,9 @@ int main() {
 			cin >> a >> b;
 			a--;
 			b--;
-			// prlong long the sum of values from [a, b]
+			// print the sum of values from [a, b]
 			cout << segtree->rangeSum(a, b) << "\n";
 		}
-		//segtree->prlong long(0);
 	}
 
 	return 0;
