@@ -22,10 +22,10 @@ struct DSU {
 		if (parent[node] == node) return node;
 		return parent[node] = find(parent[node]);
 	}
-	bool join(int a, int b) {
+	void join(int a, int b) {
 		a = find(a);
 		b = find(b);
-		if (a == b) return false;
+		if (a == b) return;
 		// make a < b to join smaller set into larger set
 		if (size[a] < size[b]) {
 			int temp = a;
@@ -38,7 +38,6 @@ struct DSU {
 
 		components--;
 		maxSize = max(maxSize, size[a]);
-		return true;
 	}
 };
 
